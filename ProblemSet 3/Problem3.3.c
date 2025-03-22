@@ -1,10 +1,10 @@
-#include <stdio.h>
+//This Code converts a set of MIDI note numbers entered by the user into their frequencies
 #include <math.h>
 
+//3.1
 float midi_to_frequency(int note) {
     return 440.0 * pow(2.0, (note - 69) / 12.0);
 }
-
 void frequencies_of_chord(int* chord, int size, float* frequencies) {
     for (int i = 0; i < size; i++) {
         frequencies[i] = midi_to_frequency(chord[i]);
